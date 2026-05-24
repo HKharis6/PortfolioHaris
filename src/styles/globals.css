@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+  background-color: #050713;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top, rgba(44, 242, 255, 0.12), transparent 24%), radial-gradient(circle at bottom right, rgba(155, 92, 255, 0.1), transparent 28%), #050713;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(44, 242, 255, 0.35);
+  color: #fff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.glass {
+  background: rgba(7, 14, 28, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 45px rgba(44, 242, 255, 0.12), 0 0 18px rgba(155, 92, 255, 0.12);
+}
+
+@media (max-width: 640px) {
+  .glass {
+    backdrop-filter: blur(18px);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(44, 242, 255, 0.08), 0 0 10px rgba(155, 92, 255, 0.08);
+  }
+}
+
+.hero-background {
+  opacity: 0.92;
+}
+
+@media (min-width: 640px) {
+  .typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(56, 189, 248, 0.85);
+    animation: typing 4s steps(60, end) 0.5s forwards, blink 1s step-end infinite;
+    width: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .typing {
+    display: inline;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

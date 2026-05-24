@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://hariskhan.netlify.app/sitemap.xml
+Host: https://hariskhan.netlify.app
